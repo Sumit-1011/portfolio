@@ -1,5 +1,4 @@
-import { HERO_CONTENT } from "../assets/constants/index";
-import profile from "../assets/profile.png";
+import { HERO_CONTENT } from "../assets/constants";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -54,7 +53,7 @@ const Hero = () => {
               animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} // Re-trigger on scroll
               transition={{ duration: 1, delay: 0.6 }}
               className="w-72 h-72 lg:w-96 lg:h-96 object-cover rounded-xl"
-              src={profile}
+              src="/sumit_convo2.JPG"
               alt="Sumit Image"
             />
           </div>

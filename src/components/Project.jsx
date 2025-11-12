@@ -1,4 +1,4 @@
-import { PROJECTS } from "../assets/constants/index";
+import { PROJECTS } from "../assets/constants";
 import { motion } from "framer-motion";
 
 const Project = () => {
@@ -23,10 +23,11 @@ const Project = () => {
             >
               <img
                 src={project.image}
-                width={150}
-                height={150}
+                width={300}
+                height={300}
                 alt={project.title}
-                className="mb-6 rounded"
+                className="mb-6 rounded hover:cursor-pointer hover:scale-105 transition-transform"
+                onClick={() => window.open(project.url, "_blank")}
               />
             </motion.div>
             <motion.div
@@ -35,7 +36,7 @@ const Project = () => {
               transition={{ duration: 0.5 }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <h6 className="mb-2 font-semibold">{project.title}</h6>
+              <h6 className="mb-2 text-xl font-semibold">{project.title}</h6>
               <p className="mb-4 text-neutral-400">{project.description}</p>
               {project.technologies.map((tech, index) => (
                 <span

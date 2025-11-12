@@ -23,14 +23,14 @@ const Navbar = () => {
           <FaGithub className="text-white hover:text-gray-800 hover:bg-white rounded-lg" />
         </a>
         <a
-          href="https://twitter.com/"
+          href="https://x.com/cavemanwithWiFi"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaSquareXTwitter className="text-white hover:text-gray-800 hover:bg-white rounded " />
         </a>
         <a
-          href="https://www.instagram.com/_sumit_kumar_mishra_"
+          href="https://www.instagram.com/sumit.km10"
           target="_blank"
           rel="noopener noreferrer"
         >

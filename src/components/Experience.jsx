@@ -1,4 +1,4 @@
-import { EXPERIENCES } from "../assets/constants/index";
+import { EXPERIENCES } from "../assets/constants";
 import { motion } from "framer-motion";
 
 const Experience = () => {
@@ -19,17 +19,20 @@ const Experience = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1 }}
-              className="w-full lg:w-1/4 "
+              className="w-full lg:w-1/4 flex flex-col justify-center items-center"
             >
-              <p className="mb-2 text-sm text-neutral-400 ">
-                {experience.year}
-              </p>
+              
+              <img
+                src={experience.logo}
+                alt={experience.company}
+                className="mb-6 h-24 w-56 object-contain rounded hover:cursor-pointer hover:scale-105 transition-transform"
+              />
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 100 }}
               transition={{ duration: 1 }}
-              className="w-full max-w-xl lg:w-3/4 "
+              className="max-w-2xl lg:w-3/4 "
             >
               <h6 className="mb-2 font-semibold ">
                 {experience.role} -{" "}
@@ -37,6 +40,9 @@ const Experience = () => {
                   {experience.company}
                 </span>
               </h6>
+              <p className="mb-2 text-sm text-neutral-400">
+                {experience.year}
+              </p>
               <p className="mb-4 text-neutral-400 ">{experience.description}</p>
               {experience.technologies.map((tech, index) => (
                 <span
